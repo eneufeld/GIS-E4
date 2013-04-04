@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_nMRoIJ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ide.application" bindingContexts="_nMRoIZ1TEeKB6d4tW6Yf-w">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_nMRoN51TEeKB6d4tW6Yf-w" label="de.neufeld.gis.application" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_nMRoP51TEeKB6d4tW6Yf-w">
+      <children xsi:type="advanced:Perspective" xmi:id="_nMRoQJ1TEeKB6d4tW6Yf-w">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_NDDKkJ1VEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.ui.application.partsashcontainer.0" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_Sm4mkJ1VEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.ui.application.partstack.navigator" selectedElement="_JirbIJ1VEeKB6d4tW6Yf-w">
+            <children xsi:type="basic:Part" xmi:id="_JirbIJ1VEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.ui.application.part.navigator" contributionURI="bundleclass://de.neufeld.gis.ui.application/de.neufeld.gis.ui.internal.application.navigator.NavigatorView" label="Project Tree" tooltip="Project Tree">
+              <menus xsi:type="menu:PopupMenu" xmi:id="_nbL68J1gEeK1N-83UfIs7g" elementId="de.neufeld.gis.ui.application.popupmenu.navigator" label="Project Tree">
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_rccJ4J1gEeK1N-83UfIs7g" elementId="de.neufeld.gis.ui.application.handledmenuitem.navigator.addMap" label="Add map" command="_skYpYJ1gEeK1N-83UfIs7g"/>
+              </menus>
+            </children>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_U_2CAJ1VEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.ui.application.partstack.map" selectedElement="_XsWrkJ1VEeKB6d4tW6Yf-w">
+            <children xsi:type="basic:Part" xmi:id="_XsWrkJ1VEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.ui.application.part.map" contributionURI="bundleclass://de.neufeld.gis.ui.application/de.neufeld.gis.ui.internal.application.map.MapView" label="Map" tooltip="The Map"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_nMRoOJ1TEeKB6d4tW6Yf-w" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_nMRoOZ1TEeKB6d4tW6Yf-w" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoOp1TEeKB6d4tW6Yf-w" label="Open" iconURI="platform:/plugin/de.neufeld.gis.application/icons/sample.gif" command="_nMRoLp1TEeKB6d4tW6Yf-w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoO51TEeKB6d4tW6Yf-w" label="Save" iconURI="platform:/plugin/de.neufeld.gis.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoPJ1TEeKB6d4tW6Yf-w" label="Quit" command="_nMRoKp1TEeKB6d4tW6Yf-w"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_nMRoPZ1TEeKB6d4tW6Yf-w" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoPp1TEeKB6d4tW6Yf-w" label="About" command="_nMRoNJ1TEeKB6d4tW6Yf-w"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_nMRoQ51TEeKB6d4tW6Yf-w">
+      <children xsi:type="menu:ToolBar" xmi:id="_nMRoRJ1TEeKB6d4tW6Yf-w" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_nMRoRp1TEeKB6d4tW6Yf-w" iconURI="platform:/plugin/de.neufeld.gis.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_xBuXYJ1gEeK1N-83UfIs7g" elementId="de.neufeld.gis.ui.application.handler.navigator.addMap" contributionURI="bundleclass://de.neufeld.gis.ui.application/de.neufeld.gis.ui.internal.application.handlers.AddMapHandler" command="_skYpYJ1gEeK1N-83UfIs7g"/>
+  <bindingTables xmi:id="_nMRoLJ1TEeKB6d4tW6Yf-w" bindingContext="_nMRoIZ1TEeKB6d4tW6Yf-w">
+    <bindings xmi:id="_nMRoLZ1TEeKB6d4tW6Yf-w" keySequence="M1+Q" command="_nMRoKp1TEeKB6d4tW6Yf-w"/>
+    <bindings xmi:id="_nMRoMJ1TEeKB6d4tW6Yf-w" keySequence="M1+O" command="_nMRoLp1TEeKB6d4tW6Yf-w"/>
+    <bindings xmi:id="_nMRoM51TEeKB6d4tW6Yf-w" keySequence="M1+S" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
+    <bindings xmi:id="_nMRoNp1TEeKB6d4tW6Yf-w" keySequence="M1+A" command="_nMRoNJ1TEeKB6d4tW6Yf-w"/>
+  </bindingTables>
+  <rootContext xmi:id="_nMRoIZ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_nMRoIp1TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_nMRoI51TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_nMRoKp1TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_nMRoLp1TEeKB6d4tW6Yf-w" elementId="de.neufeld.gis.application.open" commandName="openCommand"/>
+  <commands xmi:id="_nMRoMZ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_nMRoNJ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_skYpYJ1gEeK1N-83UfIs7g" elementId="de.neufeld.gis.ui.application.command.navigator.addMap" commandName="Add Map"/>
+  <addons xmi:id="_nMRoJJ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_nMRoJZ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_nMRoJp1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_nMRoJ51TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_nMRoKJ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_nMRoKZ1TEeKB6d4tW6Yf-w" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

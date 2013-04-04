@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" name="de.neufeld.gis.provider.osm">
+   <implementation class="de.neufeld.gis.provider.internal.osm.OSMProvider"/>
+   <reference bind="setLogService" cardinality="1..1" interface="org.osgi.service.log.LogService" name="LogService" policy="static" unbind="unsetLogService"/>
+   <reference bind="setMapDataProviderRegistry" cardinality="1..1" interface="de.neufeld.gis.core.MapDataProviderRegistry" name="MapDataProviderRegistry" policy="static" unbind="unsetMapDataProviderRegistry"/>
+</scr:component>

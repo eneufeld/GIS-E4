@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Project
+Bundle-SymbolicName: de.neufeld.gis.core
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.neufeld.gis.internal.core.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.gef4.geometry;bundle-version="0.1.0";visibility:=reexport,
+ org.eclipse.gef4.graphics;bundle-version="0.1.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.neufeld.gis.core
+Service-Component: OSGI-INF/projectService.xml,
+ OSGI-INF/mapDataProviderRegistry.xml
