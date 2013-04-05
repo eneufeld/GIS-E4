@@ -13,6 +13,8 @@ import org.eclipse.gef4.graphics.swt.SwtGraphics;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.events.ControlListener;
+import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.MouseWheelListener;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.widgets.Canvas;
@@ -47,6 +49,17 @@ public class MapView implements PaintListener {
 			public void controlMoved(ControlEvent e) {
 			}
 		});
+		canvas.addMouseWheelListener(new MouseWheelListener() {
+			
+			@Override
+			public void mouseScrolled(MouseEvent e) {
+				if(e.count>0)
+					drawParameter.zoomIn(new Point(e.x, e.y));
+				else
+					drawParameter.zoomOut(new Point(e.x, e.y));
+				canvas.redraw();
+			}
+		});
 		canvas.addPaintListener(this);
 	}
 	
@@ -59,7 +72,7 @@ public class MapView implements PaintListener {
 	
 	@Focus
 	public void onFocus() {
-		//TODO Your code here
+		canvas.setFocus();
 	}
 
 	@Override
