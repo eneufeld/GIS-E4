@@ -1,9 +1,8 @@
 package de.neufeld.gis.core.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import java.lang.instrument.UnmodifiableClassException;
-import java.util.Collections;
 
 import org.junit.After;
 import org.junit.Before;

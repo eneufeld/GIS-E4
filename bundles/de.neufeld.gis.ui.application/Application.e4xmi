@@ -19,8 +19,8 @@
     </children>
     <mainMenu xmi:id="_nMRoOJ1TEeKB6d4tW6Yf-w" elementId="menu:org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_nMRoOZ1TEeKB6d4tW6Yf-w" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoOp1TEeKB6d4tW6Yf-w" label="Open" iconURI="platform:/plugin/de.neufeld.gis.application/icons/sample.gif" command="_nMRoLp1TEeKB6d4tW6Yf-w"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoO51TEeKB6d4tW6Yf-w" label="Save" iconURI="platform:/plugin/de.neufeld.gis.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoOp1TEeKB6d4tW6Yf-w" label="Open" iconURI="platform:/plugin/de.neufeld.gis.ui.application/icons/sample.gif" command="_nMRoLp1TEeKB6d4tW6Yf-w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoO51TEeKB6d4tW6Yf-w" label="Save" iconURI="platform:/plugin/de.neufeld.gis.ui.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_nMRoPJ1TEeKB6d4tW6Yf-w" label="Quit" command="_nMRoKp1TEeKB6d4tW6Yf-w"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_nMRoPZ1TEeKB6d4tW6Yf-w" label="Help">
@@ -29,7 +29,7 @@
     </mainMenu>
     <trimBars xmi:id="_nMRoQ51TEeKB6d4tW6Yf-w">
       <children xsi:type="menu:ToolBar" xmi:id="_nMRoRJ1TEeKB6d4tW6Yf-w" elementId="toolbar:org.eclipse.ui.main.toolbar">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_nMRoRp1TEeKB6d4tW6Yf-w" iconURI="platform:/plugin/de.neufeld.gis.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_nMRoRp1TEeKB6d4tW6Yf-w" iconURI="platform:/plugin/de.neufeld.gis.ui.application/icons/save_edit.gif" command="_nMRoMZ1TEeKB6d4tW6Yf-w"/>
       </children>
     </trimBars>
   </children>
