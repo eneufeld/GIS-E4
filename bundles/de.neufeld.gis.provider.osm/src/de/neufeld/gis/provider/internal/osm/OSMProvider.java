@@ -59,34 +59,6 @@ public class OSMProvider implements MapDataProvider {
 	public void draw(GisMap gisMap, IGraphics graphics,
 			DrawParameter drawParameter) {
 		
-//		Rectangle visibleArea=drawParameter.getVisibleArea().getBounds();
-//		double numTiles=Math.pow(2, drawParameter.getZoomLevel());
-//		double tileWidth=M_PER_TILE_ZOOM_0/numTiles;
-//		double currentX=visibleArea.getX()/tileWidth;
-//		double currentY=visibleArea.getY()/tileWidth;
-//		int tilesX=(int)Math.floor(currentX);
-//		int tilesY=(int)Math.floor(currentY);
-//		
-//		double offSetX=(tilesX-currentX)*TILE_SIZE;
-//		double offSetY=(tilesY-currentY)*TILE_SIZE;
-//		
-//		int numTilesX=(int)Math.ceil(visibleArea.getWidth()/tileWidth);
-//		int numTilesY=(int)Math.ceil(visibleArea.getHeight()/tileWidth);
-//		for(int i=0;i<=numTilesX;i++){
-//			for(int j=0;j<=numTilesY;j++){
-//				String httpUrl=url.replace("$path$", (int)drawParameter.getZoomLevel()+"/"+(tilesX+i)+"/"+(tilesY+j));
-//				try {
-//					URL imageUrl = new URL(httpUrl);
-//					Image image = new Image(ImageIO.read(imageUrl));
-//					graphics.pushState().translate(offSetX+i*TILE_SIZE, offSetY+j*TILE_SIZE);
-//					graphics.paint(image);
-//					graphics.popState();
-//				} catch (IOException e) {
-//					logService.log(LogService.LOG_ERROR, e.getMessage(), e);
-//				}
-//			}
-//		}
-		
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
 		forkJoinPool.invoke(new ImageTask(drawParameter,graphics));
 	}

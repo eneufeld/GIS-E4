@@ -5,11 +5,11 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            name="de.neufeld.gis.ui.application"
+            name="de.neufeld.gis.application"
             application="org.eclipse.e4.ui.workbench.swt.E4Application">
          <property
                name="appName"
-               value="de.neufeld.gis.ui.application">
+               value="de.neufeld.gis.application">
          </property>
          <property
                name="applicationXMI"

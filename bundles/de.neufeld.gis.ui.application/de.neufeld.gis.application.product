@@ -14,7 +14,9 @@
 
    <plugins>
       <plugin id="com.ibm.icu"/>
-      <plugin id="de.neufeld.gis.application"/>
+      <plugin id="de.neufeld.gis.core"/>
+      <plugin id="de.neufeld.gis.provider.osm"/>
+      <plugin id="de.neufeld.gis.ui.application"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
       <plugin id="javax.xml"/>
@@ -74,6 +76,10 @@
       <plugin id="org.eclipse.equinox.preferences"/>
       <plugin id="org.eclipse.equinox.registry"/>
       <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.gef4.geometry"/>
+      <plugin id="org.eclipse.gef4.geometry.convert.swt"/>
+      <plugin id="org.eclipse.gef4.graphics"/>
+      <plugin id="org.eclipse.gef4.graphics.swt"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
       <plugin id="org.eclipse.osgi"/>
