@@ -1,5 +1,6 @@
 package de.neufeld.gis.core;
 
+import java.io.Serializable;
 import java.util.Set;
 
 public interface ProjectService {
@@ -14,6 +15,6 @@ public interface ProjectService {
 	 * @param mapName
 	 * @param dataProvider
 	 */
-	void createMap(String mapName, MapDataProvider dataProvider);
+	void createMap(String mapName, MapDataProvider dataProvider,Serializable providerSpecificData);
 	GisMap removeMap(String mapName);
 }

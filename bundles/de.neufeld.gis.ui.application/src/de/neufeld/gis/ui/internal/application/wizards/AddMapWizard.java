@@ -1,5 +1,6 @@
 package de.neufeld.gis.ui.internal.application.wizards;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.eclipse.jface.wizard.IWizardPage;
@@ -86,6 +87,16 @@ public class AddMapWizard extends Wizard {
 
 	public MapDataProvider getMapDataProvider() {
 		return selectProviderPage.getMapDataProvider();
+	}
+	public Serializable getProviderSpecific(){
+		if(pages==null)
+			return null;
+		for(int i=0;i<pages.size();i++){
+			Serializable data=pages.get(i).getMapProviderSpecifcData();
+			if(data!=null)
+				return data;
+		}
+		return null;
 	}
 
 }

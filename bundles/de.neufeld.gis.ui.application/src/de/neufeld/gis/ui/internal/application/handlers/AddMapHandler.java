@@ -1,6 +1,8 @@
  
 package de.neufeld.gis.ui.internal.application.handlers;
 
+import java.io.Serializable;
+
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Execute;
@@ -24,7 +26,8 @@ public class AddMapHandler {
 		if(Window.OK==dialog.open()){
 			String mapName=addMapWizard.getMapName();
 			MapDataProvider mapDataProvider=addMapWizard.getMapDataProvider();
-			projectService.createMap(mapName, mapDataProvider);
+			Serializable providerSpecificData=addMapWizard.getProviderSpecific();
+			projectService.createMap(mapName, mapDataProvider,providerSpecificData);
 			((NavigatorView)navigator.getObject()).refresh();
 		}
 	}

@@ -28,7 +28,7 @@ public class SetOSMServerPage extends CreateMapWizardPage {
 		
 		new Label(composite, SWT.NONE).setText("OSM Server"+":");
 		final Text text = new Text(composite, SWT.BORDER);
-		text.setMessage("Enter OSM Server");
+		text.setMessage("Enter OSM Server. Example: http://tile.openstreetmap.org");
 		text.addModifyListener(new ModifyListener() {
 			
 			@Override

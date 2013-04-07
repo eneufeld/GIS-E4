@@ -1,5 +1,6 @@
 package de.neufeld.gis.internal.core;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -24,11 +25,11 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public void createMap(String mapName, MapDataProvider dataProvider) {
+	public void createMap(String mapName, MapDataProvider dataProvider,Serializable providerSpecificData) {
 		if(maps.containsKey(mapName)){
 			throw new IllegalArgumentException("A Map with the name "+mapName+ " already exists.");
 		}
-		GisMap map=new GisMap(mapName,dataProvider,null);
+		GisMap map=new GisMap(mapName,dataProvider,providerSpecificData);
 		maps.put(mapName, map);
 	}
 
