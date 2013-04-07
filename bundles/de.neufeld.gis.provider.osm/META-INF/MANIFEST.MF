@@ -10,3 +10,5 @@ Import-Package: org.osgi.framework;version="1.3.0",
  org.osgi.service.log;version="1.3.0"
 Service-Component: OSGI-INF/osmProvider.xml
 Require-Bundle: de.neufeld.gis.core;bundle-version="1.0.0"
+Export-Package: de.neufeld.gis.provider.internal.osm;x-internal:=true,
+ de.neufeld.gis.provider.osm;x-friends:="de.neufeld.gis.provider.osm.swt"

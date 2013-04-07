@@ -1,4 +1,4 @@
-package de.neufeld.gis.provider.internal.osm;
+package de.neufeld.gis.provider.osm;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,9 +18,14 @@ import de.neufeld.gis.core.DrawParameter;
 import de.neufeld.gis.core.GisMap;
 import de.neufeld.gis.core.MapDataProvider;
 import de.neufeld.gis.core.MapDataProviderRegistry;
+import de.neufeld.gis.core.MapDataUIProvider;
 import de.neufeld.gis.core.SearchQuery;
+import de.neufeld.gis.core.SearchResult;
 
 public class OSMProvider implements MapDataProvider {
+	
+	public static final String NAME="OSM_Provider";
+	
 	private String url = "http://tile.openstreetmap.org/$path$.png";
 	private final double TILE_SIZE=256;
 	private final double M_PER_PIXEL_ZOOM_0=156543.034;
@@ -56,13 +61,13 @@ public class OSMProvider implements MapDataProvider {
 	}
 
 	@Override
-	public void draw(GisMap gisMap, IGraphics graphics,
+	public Image draw(GisMap gisMap, IGraphics graphics,
 			DrawParameter drawParameter) {
 		
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
-		forkJoinPool.invoke(new ImageTask(drawParameter,graphics));
+		return forkJoinPool.invoke(new ImageTask(drawParameter,graphics));
 	}
-	private class ImageTask extends RecursiveTask<Void>{
+	private class ImageTask extends RecursiveTask<Image>{
 		private DrawParameter drawParameter;
 		private IGraphics graphics;
 		private ImageTask(DrawParameter drawParameter,IGraphics graphics){
@@ -70,7 +75,7 @@ public class OSMProvider implements MapDataProvider {
 			this.graphics=graphics;
 		}
 		@Override
-		protected Void compute() {
+		protected Image compute() {
 			Rectangle visibleArea=drawParameter.getVisibleArea().getBounds();
 			double numTiles=Math.pow(2, drawParameter.getZoomLevel());
 			double tileWidth=M_PER_TILE_ZOOM_0/numTiles;
@@ -148,8 +153,12 @@ public class OSMProvider implements MapDataProvider {
 	
 	
 	@Override
-	public void search(GisMap gisMap, SearchQuery searchQuery) {
-		// TODO Auto-generated method stub
+	public SearchResult search(GisMap gisMap, SearchQuery searchQuery) {
+		return null;
+	}
 
+	@Override
+	public String getName() {
+		return NAME;
 	}
 }
