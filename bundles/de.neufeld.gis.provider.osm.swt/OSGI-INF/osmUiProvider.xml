@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" name="de.neufeld.gis.provider.osm.swt">
+   <implementation class="de.neufeld.gis.provider.osm.swt.OSMUIProvider"/>
+   <reference bind="setMapDataProviderRegistry" cardinality="1..1" interface="de.neufeld.gis.core.MapDataProviderRegistry" name="MapDataProviderRegistry" policy="static" unbind="unsetMapDataProviderRegistry"/>
+</scr:component>

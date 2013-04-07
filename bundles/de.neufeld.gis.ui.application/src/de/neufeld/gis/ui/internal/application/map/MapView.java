@@ -127,6 +127,9 @@ public class MapView implements PaintListener {
 			if((e.stateMask&SWT.BUTTON1)!=0 && startPoint==null){
 				startPoint=new Point(e.x, e.y);
 			}
+//			else if((e.stateMask&SWT.BUTTON1)!=0 && startPoint!=null){
+//				canvas.
+//			}
 		}
 		
 	}

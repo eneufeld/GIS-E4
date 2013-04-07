@@ -1,35 +1,42 @@
 package de.neufeld.gis.core;
 
+import java.io.Serializable;
+
 import org.eclipse.gef4.graphics.IGraphics;
+import org.eclipse.gef4.graphics.image.Image;
 
-public final class GisMap {
+public final class GisMap implements Serializable{
 
+	/**
+	 * SerializationID
+	 */
+	private static final long serialVersionUID = -128040233302892707L;
 	private final MapDataProvider mapDataProvider;
 	private String name;
-	private final Object dataProviderSpecific;
+	private final Serializable providerSpecificData;
 
-	public GisMap(String name, MapDataProvider mapDataProvider,Object dataProviderSpecific){
+	public GisMap(String name, MapDataProvider mapDataProvider,Serializable providerSpecificData){
 		this.mapDataProvider=mapDataProvider;
 		this.name=name;
-		this.dataProviderSpecific = dataProviderSpecific;
+		this.providerSpecificData = providerSpecificData;
 	}
 	
 	public String getName(){
 		return name;
 	}
-	public Object getDataProviderSpecific() {
-		return dataProviderSpecific;
+	public Serializable getProviderSpecificData() {
+		return providerSpecificData;
 	}
 
 	@Override
 	public String toString(){
 		return name;
 	}
-	public void draw(IGraphics graphics,DrawParameter drawParameter) {
-		mapDataProvider.draw(this,graphics,drawParameter);
+	public Image draw(IGraphics graphics,DrawParameter drawParameter) {
+		return mapDataProvider.draw(this,graphics,drawParameter);
 	}
 
-	public void search(SearchQuery searchQuery) {
-		mapDataProvider.search(this,searchQuery);
+	public SearchResult search(SearchQuery searchQuery) {
+		return mapDataProvider.search(this,searchQuery);
 	}
 }
